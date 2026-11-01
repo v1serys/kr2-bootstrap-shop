@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Каталог товаров интернет-магазина TechPulse на компонентах Bootstrap."
+    />
+    <title>Каталог — TechPulse (Bootstrap Shop)</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body class="d-flex flex-column bg-light">
+    <!-- Единая навигация Bootstrap -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">⚡ TechPulse</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Переключить навигацию"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="catalog.html"
+                >Каталог</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Товар</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="order.html">Заявка</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Дополнительно
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="catalog.html">Все товары</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="order.html">Оформить заявку</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="index.html#popular"
+                    >Популярное</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5 flex-grow-1">
+      <!-- Информационное сообщение Alert (Этап 5) -->
+      <div class="alert alert-info" role="alert">
+        Выберите устройство из каталога TechPulse. Карточки товаров оформлены с
+        помощью компонента Bootstrap <code>card</code>, а кнопка «Заказать»
+        открывает <code>modal</code>.
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h2 mb-0 fw-bold">Каталог товаров</h1>
+        <a class="btn btn-outline-primary" href="order.html">
+          Оставить заявку
+        </a>
+      </div>
+
+      <!-- Сетка карточек товаров (Этап 6) -->
+      <div class="row g-4">
+        <!-- Карточка 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top"
+              alt="Наушники Pulse Audio Pro"
+            />
+            <div class="card-body d-flex flex-column">
+              <div
+                class="d-flex justify-content-between align-items-start mb-3"
+              >
+                <h2 class="card-title h5 mb-0">Наушники Pulse Audio Pro</h2>
+                <span class="badge bg-success">Новинка</span>
+              </div>
+              <p class="card-text text-muted">
+                Беспроводные наушники с активным шумоподавлением ANC и мягкими
+                амбушюрами с памятью формы.
+              </p>
+              <p class="fw-bold fs-5 mt-auto">12 990 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <button
+                  class="btn btn-outline-primary"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                >
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top"
+              alt="Клавиатура KeyChronos K8"
+            />
+            <div class="card-body d-flex flex-column">
+              <div
+                class="d-flex justify-content-between align-items-start mb-3"
+              >
+                <h2 class="card-title h5 mb-0">Клавиатура KeyChronos K8</h2>
+                <span class="badge bg-warning text-dark">Хит</span>
+              </div>
+              <p class="card-text text-muted">
+                Компактная беспроводная механика с тактильными переключателями
+                Gateron Brown и RGB.
+              </p>
+              <p class="fw-bold fs-5 mt-auto">8 490 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <button
+                  class="btn btn-outline-primary"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                >
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top"
+              alt="Смарт-часы ChronoFit X"
+            />
+            <div class="card-body d-flex flex-column">
+              <div
+                class="d-flex justify-content-between align-items-start mb-3"
+              >
+                <h2 class="card-title h5 mb-0">Смарт-часы ChronoFit X</h2>
+                <span class="badge bg-danger">Скидка</span>
+              </div>
+              <p class="card-text text-muted">
+                Умные часы с GPS-трекером, пульсометром, AMOLED-экраном и более
+                100 режимами тренировок.
+              </p>
+              <p class="fw-bold fs-5 mt-auto text-danger">9 990 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <button
+                  class="btn btn-outline-primary"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                >
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top"
+              alt="Мышь GlideMaster Pro"
+            />
+            <div class="card-body d-flex flex-column">
+              <div
+                class="d-flex justify-content-between align-items-start mb-3"
+              >
+                <h2 class="card-title h5 mb-0">Мышь GlideMaster Pro</h2>
+                <span class="badge bg-primary">В наличии</span>
+              </div>
+              <p class="card-text text-muted">
+                Эргономичная беспроводная мышь с оптическим сенсором 26 000 DPI
+                и тефлоновыми ножками.
+              </p>
+              <p class="fw-bold fs-5 mt-auto">5 490 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <button
+                  class="btn btn-outline-primary"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                >
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top"
+              alt="Колонка BassBoom Mini"
+            />
+            <div class="card-body d-flex flex-column">
+              <div
+                class="d-flex justify-content-between align-items-start mb-3"
+              >
+                <h2 class="card-title h5 mb-0">Колонка BassBoom Mini</h2>
+                <span class="badge bg-warning text-dark">Хит</span>
+              </div>
+              <p class="card-text text-muted">
+                Мощный объёмный звук 360°, влагозащита IPX7 и до 18 часов работы
+                без подзарядки.
+              </p>
+              <p class="fw-bold fs-5 mt-auto">6 200 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <button
+                  class="btn btn-outline-primary"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                >
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 6 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top"
+              alt="Микрофон VoiceCast USB"
+            />
+            <div class="card-body d-flex flex-column">
+              <div
+                class="d-flex justify-content-between align-items-start mb-3"
+              >
+                <h2 class="card-title h5 mb-0">Микрофон VoiceCast USB</h2>
+                <span class="badge bg-success">Новинка</span>
+              </div>
+              <p class="card-text text-muted">
+                Конденсаторный USB-микрофон с кардиоидной направленностью для
+                стримов и подкастов.
+              </p>
+              <p class="fw-bold fs-5 mt-auto">7 900 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <button
+                  class="btn btn-outline-primary"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                >
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Компонент Accordion (Этап 10) -->
+      <section class="mt-5 pt-3">
+        <h2 class="h4 mb-3 fw-bold">Частые вопросы</h2>
+        <div class="accordion shadow-sm" id="faqAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqOne"
+                aria-expanded="true"
+                aria-controls="faqOne"
+              >
+                Можно ли оформить заявку без регистрации?
+              </button>
+            </h3>
+            <div
+              id="faqOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Да, в магазине TechPulse заявка оформляется без регистрации —
+                через быстрое модальное окно или на странице оформления заявки.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqTwo"
+                aria-expanded="false"
+                aria-controls="faqTwo"
+              >
+                Где используется Bootstrap в этом проекте?
+              </button>
+            </h3>
+            <div
+              id="faqTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Bootstrap 5 используется для 12-колоночной сетки, карточек
+                товаров (<code>card</code>), форм (<code>form-control</code>,
+                <code>input-group</code>), навигации (<code>navbar</code>),
+                сообщений (<code>alert</code>) и модальных окон
+                (<code>modal</code>).
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqThree"
+                aria-expanded="false"
+                aria-controls="faqThree"
+              >
+                Какая гарантия предоставляется на гаджеты?
+              </button>
+            </h3>
+            <div
+              id="faqThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                На все товары предоставляется официальная гарантия 12 месяцев со
+                дня покупки.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Модальное окно быстрого заказа (Этап 7) -->
+    <div
+      class="modal fade"
+      id="orderModal"
+      tabindex="-1"
+      aria-labelledby="orderModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="orderModalLabel">Быстрая заявка</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Закрыть"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted">
+              Оставьте контактные данные, и менеджер TechPulse свяжется с вами
+              для подтверждения заказа.
+            </p>
+            <form>
+              <div class="mb-3">
+                <label for="modal-name" class="form-label">Имя</label>
+                <input
+                  id="modal-name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Введите ваше имя"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="modal-phone" class="form-label">Телефон</label>
+                <input
+                  id="modal-phone"
+                  type="tel"
+                  class="form-control"
+                  placeholder="+7 (900) 000-00-00"
+                  required
+                />
+              </div>
+              <div class="form-check mb-3">
+                <input
+                  id="modal-agree"
+                  class="form-check-input"
+                  type="checkbox"
+                  required
+                />
+                <label class="form-check-label" for="modal-agree">
+                  Согласен на обработку данных
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Закрыть
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Отправить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row align-items-center g-3">
+          <div class="col-12 col-md-6">
+            <p class="mb-0">
+              &copy; 2026 TechPulse (Bootstrap Shop). Учебный проект.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 text-md-end">
+            <a class="text-white text-decoration-none me-3" href="catalog.html"
+              >Каталог</a
+            >
+            <a class="text-white text-decoration-none" href="order.html"
+              >Заявка</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
