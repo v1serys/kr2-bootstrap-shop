@@ -8,23 +8,21 @@
       content="Главная страница интернет-магазина гаджетов и электроники TechPulse на Bootstrap."
     />
     <title>Главная — TechPulse (Bootstrap Shop)</title>
-    <!-- Подключение Bootstrap CSS через CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Подключение собственного файла стилей ПОСЛЕ Bootstrap -->
     <link rel="stylesheet" href="css/custom.css" />
   </head>
   <body class="d-flex flex-column bg-light">
-    <!-- Шапка страницы (Этап 4) -->
+    <!-- Шапка страницы -->
     <header class="bg-primary text-white py-4">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-md-8">
             <h1 class="h3 mb-1 fw-bold">⚡ TechPulse</h1>
             <p class="mb-0 opacity-75">
-              Интернет-магазин современных гаджетов и электроники на Bootstrap
+              Учебный интернет-магазин гаджетов и электроники на Bootstrap
             </p>
           </div>
           <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
@@ -34,7 +32,7 @@
       </div>
     </header>
 
-    <!-- Навигация Bootstrap (Этап 5) -->
+    <!-- Единая навигация Bootstrap с dropdown (Этап 4) -->
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm"
     >
@@ -54,9 +52,9 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">
-                Главная
-              </a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Главная</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="catalog.html">Каталог</a>
@@ -67,14 +65,37 @@
             <li class="nav-item">
               <a class="nav-link" href="order.html">Заявка</a>
             </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Дополнительно
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="catalog.html">Все товары</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="order.html">Оформить заявку</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="index.html#popular"
+                    >Популярное</a
+                  >
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Основное содержимое страницы -->
     <main class="flex-grow-1">
-      <!-- Hero-блок на сетке (Этап 6) -->
+      <!-- Hero-блок на сетке -->
       <section class="container my-5">
         <div class="row align-items-center g-4">
           <div class="col-12 col-lg-6">
@@ -84,11 +105,16 @@
             <p class="lead text-muted mb-4">
               Откройте для себя премиальные аудиоустройства, механические
               клавиатуры для работы и умные гаджеты. Проект демонстрирует
-              использование 12-колоночной Bootstrap-сетки и utility-классов.
+              использование Bootstrap-сетки и готовых компонентов.
             </p>
-            <a class="btn btn-primary btn-lg" href="#popular">
-              Перейти к товарам
-            </a>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-primary btn-lg" href="catalog.html">
+                Перейти в каталог
+              </a>
+              <a class="btn btn-outline-primary btn-lg" href="order.html">
+                Оставить заявку
+              </a>
+            </div>
           </div>
           <div class="col-12 col-lg-6">
             <div
@@ -100,51 +126,57 @@
                 class="img-fluid rounded mb-3 hero-banner-img"
               />
               <p class="mb-0 text-muted small">
-                Специальное предложение: скидка 10% студентам по промокоду
-                <strong>MIREA2026</strong>
+                Специальное предложение: скидка 10% студентам на всю периферию
+                для учёбы и программирования!
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Блок преимуществ (Этап 7) -->
+      <!-- Блок преимуществ -->
       <section class="container my-5">
         <h2 class="text-center mb-4 fw-bold">
           Преимущества магазина TechPulse
         </h2>
         <div class="row g-4">
           <div class="col-12 col-md-4">
-            <div class="p-4 border rounded h-100 bg-white shadow-sm">
-              <h3 class="h5 fw-bold text-primary">Официальная гарантия</h3>
-              <p class="mb-0 text-muted">
-                Гарантийное обслуживание 12 месяцев на все устройства. Страница
-                построена на 12-колоночной системе Bootstrap.
-              </p>
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body p-4">
+                <h3 class="h5 fw-bold text-primary">Официальная гарантия</h3>
+                <p class="mb-0 text-muted">
+                  Гарантийное обслуживание 12 месяцев на все устройства.
+                  Страница построена на 12-колоночной системе Bootstrap.
+                </p>
+              </div>
             </div>
           </div>
           <div class="col-12 col-md-4">
-            <div class="p-4 border rounded h-100 bg-white shadow-sm">
-              <h3 class="h5 fw-bold text-primary">Быстрая доставка</h3>
-              <p class="mb-0 text-muted">
-                Курьерская доставка в день заказа. Адаптивные колонки
-                автоматически перестраиваются под размер экрана.
-              </p>
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body p-4">
+                <h3 class="h5 fw-bold text-primary">Быстрая доставка</h3>
+                <p class="mb-0 text-muted">
+                  Курьерская доставка в день заказа. Адаптивные колонки
+                  автоматически перестраиваются под размер экрана.
+                </p>
+              </div>
             </div>
           </div>
           <div class="col-12 col-md-4">
-            <div class="p-4 border rounded h-100 bg-white shadow-sm">
-              <h3 class="h5 fw-bold text-primary">Проверенное качество</h3>
-              <p class="mb-0 text-muted">
-                Оригинальная продукция ведущих брендов. Проект подготовлен к
-                добавлению карточек, форм и модальных окон.
-              </p>
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body p-4">
+                <h3 class="h5 fw-bold text-primary">Готовые компоненты</h3>
+                <p class="mb-0 text-muted">
+                  В проекте задействованы карточки, модальные окна, формы,
+                  уведомления и аккордеон Bootstrap 5.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Сетка популярных товаров (Этап 8) -->
+      <!-- Сетка популярных товаров -->
       <section class="container my-5" id="popular">
         <div class="d-flex justify-content-between align-items-center mb-4">
           <h2 class="mb-0 fw-bold">Популярные товары</h2>
@@ -154,85 +186,87 @@
         </div>
 
         <div class="row g-4">
-          <!-- Товар 1 -->
           <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="border rounded h-100 p-4 bg-white shadow-sm d-flex flex-column"
-            >
-              <div class="mb-3">
-                <span class="badge bg-success">Новинка</span>
-              </div>
+            <div class="card h-100 shadow-sm">
               <img
                 src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
                 alt="Наушники Pulse Audio Pro"
-                class="img-fluid rounded mb-3 product-img"
               />
-              <h3 class="h5 fw-bold">Наушники Pulse Audio Pro</h3>
-              <p class="text-muted">
-                Студийное звучание, активное шумоподавление ANC и до 40 часов
-                автономной работы.
-              </p>
-              <p class="fw-bold fs-5 mb-3 mt-auto">12 990 руб.</p>
-              <a class="btn btn-primary w-100" href="product.html">
-                Подробнее
-              </a>
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="d-flex justify-content-between align-items-start mb-2"
+                >
+                  <h3 class="card-title h5 mb-0">Наушники Pulse Audio Pro</h3>
+                  <span class="badge bg-success">Новинка</span>
+                </div>
+                <p class="card-text text-muted">
+                  Студийное звучание, активное шумоподавление ANC и до 40 часов
+                  автономной работы.
+                </p>
+                <p class="fw-bold fs-5 mt-auto mb-3">12 990 руб.</p>
+                <a class="btn btn-primary w-100" href="product.html"
+                  >Подробнее</a
+                >
+              </div>
             </div>
           </div>
 
-          <!-- Товар 2 -->
           <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="border rounded h-100 p-4 bg-white shadow-sm d-flex flex-column"
-            >
-              <div class="mb-3">
-                <span class="badge bg-warning text-dark">Хит</span>
-              </div>
+            <div class="card h-100 shadow-sm">
               <img
                 src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
                 alt="Клавиатура KeyChronos K8"
-                class="img-fluid rounded mb-3 product-img"
               />
-              <h3 class="h5 fw-bold">Клавиатура KeyChronos K8</h3>
-              <p class="text-muted">
-                Беспроводная механическая клавиатура с RGB-подсветкой и
-                алюминиевым корпусом.
-              </p>
-              <p class="fw-bold fs-5 mb-3 mt-auto">8 490 руб.</p>
-              <a class="btn btn-primary w-100" href="product.html">
-                Подробнее
-              </a>
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="d-flex justify-content-between align-items-start mb-2"
+                >
+                  <h3 class="card-title h5 mb-0">Клавиатура KeyChronos K8</h3>
+                  <span class="badge bg-warning text-dark">Хит</span>
+                </div>
+                <p class="card-text text-muted">
+                  Беспроводная механическая клавиатура с RGB-подсветкой и
+                  алюминиевым корпусом.
+                </p>
+                <p class="fw-bold fs-5 mt-auto mb-3">8 490 руб.</p>
+                <a class="btn btn-primary w-100" href="product.html"
+                  >Подробнее</a
+                >
+              </div>
             </div>
           </div>
 
-          <!-- Товар 3 -->
           <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="border rounded h-100 p-4 bg-white shadow-sm d-flex flex-column"
-            >
-              <div class="mb-3">
-                <span class="badge bg-danger">Скидка -20%</span>
-              </div>
+            <div class="card h-100 shadow-sm">
               <img
                 src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
                 alt="Смарт-часы ChronoFit X"
-                class="img-fluid rounded mb-3 product-img"
               />
-              <h3 class="h5 fw-bold">Смарт-часы ChronoFit X</h3>
-              <p class="text-muted">
-                Мониторинг здоровья 24/7, яркий AMOLED-дисплей и защита от воды
-                IP68.
-              </p>
-              <p class="fw-bold fs-5 text-danger mb-3 mt-auto">9 990 руб.</p>
-              <a class="btn btn-primary w-100" href="product.html">
-                Подробнее
-              </a>
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="d-flex justify-content-between align-items-start mb-2"
+                >
+                  <h3 class="card-title h5 mb-0">Смарт-часы ChronoFit X</h3>
+                  <span class="badge bg-danger">Скидка</span>
+                </div>
+                <p class="card-text text-muted">
+                  Мониторинг здоровья 24/7, яркий AMOLED-дисплей и защита от
+                  воды IP68.
+                </p>
+                <p class="fw-bold fs-5 text-danger mt-auto mb-3">9 990 руб.</p>
+                <a class="btn btn-primary w-100" href="product.html"
+                  >Подробнее</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Подвал сайта (Этап 9) -->
     <footer class="bg-dark text-white py-4 mt-5">
       <div class="container">
         <div class="row align-items-center g-3">
@@ -242,18 +276,17 @@
             </p>
           </div>
           <div class="col-12 col-md-6 text-md-end">
-            <a class="text-white text-decoration-none me-3" href="catalog.html">
-              Каталог
-            </a>
-            <a class="text-white text-decoration-none" href="order.html">
-              Заявка
-            </a>
+            <a class="text-white text-decoration-none me-3" href="catalog.html"
+              >Каталог</a
+            >
+            <a class="text-white text-decoration-none" href="order.html"
+              >Заявка</a
+            >
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Подключение Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

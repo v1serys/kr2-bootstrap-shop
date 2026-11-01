@@ -6,14 +6,22 @@ body {
   min-height: 240px;
 }
 
+.placeholder-image {
+  min-height: 320px;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
 .hero-banner-img {
   max-height: 260px;
   width: 100%;
   object-fit: cover;
 }
 
-.product-img {
-  height: 200px;
-  width: 100%;
+.product-detail-img {
+  max-height: 380px;
   object-fit: cover;
 }
