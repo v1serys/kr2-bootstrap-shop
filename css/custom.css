@@ -1,0 +1,19 @@
+body {
+  min-height: 100vh;
+}
+
+.placeholder-box {
+  min-height: 240px;
+}
+
+.hero-banner-img {
+  max-height: 260px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
